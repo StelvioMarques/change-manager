@@ -1,39 +1,29 @@
-import { Button } from "@/components/ui/button";
+import Cursor from '@/components/Cursor'
+import Marquee from '@/components/Marqee'
+import Hero from '@/components/sections/hero'
+import Navbar from '@/components/layout/navbar'
+import Footer from '@/components/layout/footer/footer'
+import WhyUs from '@/components/sections/why-us'
+import CtaSection from '@/components/sections/cta'
+import Process from '@/components/sections/process'
+import Services from '@/components/sections/services'
+import Testimonials from '@/components/sections/testimonials'
 
-export default function LandingPage() {
+export default function Home() {
   return (
-    <div>
-      <header className="h-14 flex justify-around items-center border-b">
-        <div className="flex gap-12 items-center">
-          <h1 className="text-xl font-semibold">Logo</h1>
-
-          <nav className="flex list-none gap-8 justify-center">
-            <li>
-              <a href="#">Home</a>
-            </li>
-
-            <li>
-              <a href="#">Sobre</a>
-            </li>
-
-            <li>
-              <a href="#">Serviços</a>
-            </li>
-          </nav>
-        </div>
-
-        <Button>Começar agora</Button>
-      </header>
-
+    <>
+      {/*  <Cursor /> */}
+      <Navbar />
       <main>
-        <div>
-
-        </div>
+        <Hero />
+        <Marquee />
+        <Services />
+        <Process />
+        <WhyUs />
+        <Testimonials />
+        <CtaSection />
       </main>
-
-      <footer>
-
-      </footer>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }
